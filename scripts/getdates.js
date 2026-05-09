@@ -6,4 +6,4 @@ const lastModified = document.querySelector("#lastModified");
 const today = new Date();
 
 year.innerHTML = today.getFullYear();
-lastModified.innerHTML = "Last Modification: " + document.lastModified;
+lastModified.innerHTML = document.lastModified;
