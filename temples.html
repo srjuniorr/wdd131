@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | WDD 131 | Flavio Dias</title>
+    <meta name="description" content="Picture album of LDS temples around the world. Built for the WDD 131 Week 2 assignment.">
+    <meta name="author" content="Flavio Dias">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
+
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span class="site-name">Temple Album</span>
+        <button id="menu-toggle">&#9776;</button>
+        <nav id="main-nav">
+            <a href="#" class="active">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Home</h1>
+
+        <section class="album">
+            <figure>
+                <img src="images/san-diego.jpg" alt="San Diego California Temple" loading="lazy" width="500" height="375">
+                <figcaption>San Diego California</figcaption>
+            </figure>
+            <figure>
+                <img src="images/salt-lake.jpg" alt="Salt Lake City Utah Temple" loading="lazy" width="500" height="375">
+                <figcaption>Salt Lake City Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/sao-paulo.jpg" alt="Sao Paulo Brazil Temple" loading="lazy" width="500" height="375">
+                <figcaption>Sao Paulo Brazil</figcaption>
+            </figure>
+            <figure>
+                <img src="images/campinas.jpg" alt="Campinas Brazil Temple" loading="lazy" width="500" height="375">
+                <figcaption>Campinas Brazil</figcaption>
+            </figure>
+            <figure>
+                <img src="images/washington.jpg" alt="Washington D.C. Temple" loading="lazy" width="500" height="375">
+                <figcaption>Washington D.C.</figcaption>
+            </figure>
+            <figure>
+                <img src="images/london.jpg" alt="London England Temple" loading="lazy" width="500" height="375">
+                <figcaption>London England</figcaption>
+            </figure>
+            <figure>
+                <img src="images/tokyo.jpg" alt="Tokyo Japan Temple" loading="lazy" width="500" height="375">
+                <figcaption>Tokyo Japan</figcaption>
+            </figure>
+            <figure>
+                <img src="images/nauvoo.jpg" alt="Nauvoo Illinois Temple" loading="lazy" width="500" height="375">
+                <figcaption>Nauvoo Illinois</figcaption>
+            </figure>
+            <figure>
+                <img src="images/provo-city.jpg" alt="Provo City Center Utah Temple" loading="lazy" width="500" height="375">
+                <figcaption>Provo City Center Utah</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Flavio Dias | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
