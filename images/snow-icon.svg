@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Snowy weather">
+  <title>Snowy weather</title>
+  <path d="M90 56a16 16 0 0 0-31-4 14 14 0 0 0-19 13 14 14 0 0 0 14 14h36a12 12 0 0 0 0-23z" fill="#E8EEF5" stroke="#003366" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#003366" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <g transform="translate(38,99)">
+      <line x1="-7" y1="0" x2="7" y2="0"/>
+      <line x1="0" y1="-7" x2="0" y2="7"/>
+      <line x1="-5" y1="-5" x2="5" y2="5"/>
+      <line x1="-5" y1="5" x2="5" y2="-5"/>
+    </g>
+    <g transform="translate(60,105)">
+      <line x1="-7" y1="0" x2="7" y2="0"/>
+      <line x1="0" y1="-7" x2="0" y2="7"/>
+      <line x1="-5" y1="-5" x2="5" y2="5"/>
+      <line x1="-5" y1="5" x2="5" y2="-5"/>
+    </g>
+    <g transform="translate(82,99)">
+      <line x1="-7" y1="0" x2="7" y2="0"/>
+      <line x1="0" y1="-7" x2="0" y2="7"/>
+      <line x1="-5" y1="-5" x2="5" y2="5"/>
+      <line x1="-5" y1="5" x2="5" y2="-5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+@media (min-width: 768px) {
+    header {
+        padding: 30px 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    .hero {
+        position: relative;
+        margin-top: 15px;
+    }
+
+    .hero img {
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    .card {
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 0;
+        width: 280px;
+        border: none;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+        background-color: var(--accent);
+        color: var(--primary);
+        margin: 0;
+        padding: 10px 15px;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        margin: 0 15px;
+        padding: 8px 0;
+    }
+
+    .data {
+        top: 20px;
+        left: 20px;
+    }
+
+    .weather {
+        bottom: 20px;
+        right: 20px;
+        text-align: left;
+    }
+
+    .weather h2::after {
+        content: " \26C4";
+    }
+
+    .weather .weather-icon {
+        display: none;
+    }
+}

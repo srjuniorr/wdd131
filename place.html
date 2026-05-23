@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utah | WDD 131 | Flavio Dias</title>
+    <meta name="description" content="Page about Utah, USA with state facts and current weather. Built for the WDD 131 Week 3 assignment.">
+    <meta name="author" content="Flavio Dias">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Utah</h1>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 768px)" srcset="images/utah-large.webp">
+                <img src="images/utah-small.webp" alt="Snowy mountains and skyline of Salt Lake City, Utah">
+            </picture>
+
+            <div class="data card">
+                <h2>Data</h2>
+                <p><strong>Capital:</strong> Salt Lake City</p>
+                <p><strong>Population:</strong> 3,417,734</p>
+                <p><strong>Area:</strong> 84,899 sq mi</p>
+                <p><strong>Statehood:</strong> January 4, 1896</p>
+                <p><strong>Motto:</strong> Industry</p>
+                <p><strong>Nickname:</strong> The Beehive State</p>
+                <p><strong>Time Zone:</strong> Mountain (UTC-7)</p>
+            </div>
+
+            <div class="weather card">
+                <h2>Weather</h2>
+                <img src="images/snow-icon.svg" alt="Snow icon" class="weather-icon">
+                <p><strong>Temperature:</strong> 35 &deg;F</p>
+                <p><strong>Conditions:</strong> Snow</p>
+                <p><strong>Wind:</strong> 10 mph</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> &#127956;&#65039; Flavio Dias &#127956;&#65039; Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
