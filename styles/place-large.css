@@ -1,27 +1,18 @@
 @media (min-width: 768px) {
-    .place-header {
-        padding: var(--space-xl) var(--space-md);
+    header {
+        padding: 30px 20px;
     }
 
-    .place-header h1 {
+    header h1 {
         font-size: 3rem;
-    }
-
-    main {
-        padding: 0 var(--space-md);
     }
 
     .hero {
         position: relative;
-        display: block;
-        margin-top: var(--space-md);
-        border-radius: var(--radius);
-        overflow: hidden;
-        box-shadow: var(--shadow-card);
+        margin-top: 15px;
     }
 
     .hero img {
-        border-bottom: none;
         aspect-ratio: 16 / 9;
         object-fit: cover;
     }
@@ -29,46 +20,44 @@
     .card {
         position: absolute;
         background-color: rgba(255, 255, 255, 0.95);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow-card);
-        border-bottom: none;
         padding: 0;
-        overflow: hidden;
         width: 280px;
+        border: none;
+        border-radius: 5px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .card h2 {
-        background-color: var(--color-accent);
-        color: var(--color-text-on-accent);
+        background-color: var(--accent);
+        color: var(--primary);
         margin: 0;
-        padding: var(--space-sm) var(--space-md);
-        font-size: 1.25rem;
+        padding: 10px 15px;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .card p {
+        margin: 0 15px;
+        padding: 8px 0;
+    }
+
+    .data {
+        top: 20px;
+        left: 20px;
+    }
+
+    .weather {
+        bottom: 20px;
+        right: 20px;
         text-align: left;
     }
 
-    .card dl {
-        padding: var(--space-md);
-        margin: 0;
-    }
-
-    .data-card {
-        top: var(--space-lg);
-        left: var(--space-lg);
-    }
-
-    .weather-card {
-        top: auto;
-        bottom: var(--space-lg);
-        right: var(--space-lg);
-        text-align: left;
-    }
-
-    .weather-card h2::after {
+    .weather h2::after {
         content: " \26C4";
-        margin-left: var(--space-xs);
     }
 
-    .weather-card .weather-icon {
+    .weather .weather-icon {
         display: none;
     }
 }

@@ -3,11 +3,15 @@ const windSpeed = 10;
 
 const calculateWindChill = (t, v) => 35.74 + 0.6215 * t - 35.75 * Math.pow(v, 0.16) + 0.4275 * t * Math.pow(v, 0.16);
 
-const windChillOutput = (temperature <= 50 && windSpeed > 3)
-    ? `${calculateWindChill(temperature, windSpeed).toFixed(1)} °F`
-    : 'N/A';
+let windChill;
+if (temperature <= 50 && windSpeed > 3) {
+    windChill = calculateWindChill(temperature, windSpeed).toFixed(1) + ' °F';
+} else {
+    windChill = 'N/A';
+}
 
-document.getElementById('wind-chill').textContent = windChillOutput;
+document.getElementById('windchill').innerHTML = windChill;
 
-document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+const today = new Date();
+document.getElementById('currentyear').innerHTML = today.getFullYear();
+document.getElementById('lastModified').innerHTML = 'Last Modification: ' + document.lastModified;

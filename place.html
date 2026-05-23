@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Utah | WDD 131 | Flavio Dias</title>
-    <meta name="description" content="A snapshot of Utah, USA: key facts about the Beehive State and current weather in Salt Lake City. Built for the WDD 131 Week 3 assignment.">
+    <meta name="description" content="Page about Utah, USA with state facts and current weather. Built for the WDD 131 Week 3 assignment.">
     <meta name="author" content="Flavio Dias">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles/place.css">
     <link rel="stylesheet" href="styles/place-large.css">
@@ -19,44 +19,40 @@
 </head>
 
 <body>
-    <header class="place-header">
+    <header>
         <h1>Utah</h1>
     </header>
 
     <main>
-        <section class="hero">
+        <div class="hero">
             <picture>
-                <source media="(min-width: 768px)" srcset="images/utah-large.webp" type="image/webp">
-                <img src="images/utah-small.webp" alt="Snowy Wasatch mountains rising above Salt Lake City, Utah" width="1200" height="800">
+                <source media="(min-width: 768px)" srcset="images/utah-large.webp">
+                <img src="images/utah-small.webp" alt="Snowy mountains and skyline of Salt Lake City, Utah">
             </picture>
 
-            <section class="card data-card" aria-labelledby="data-heading">
-                <h2 id="data-heading">Data</h2>
-                <dl>
-                    <div><dt>Capital:</dt><dd>Salt Lake City</dd></div>
-                    <div><dt>Population:</dt><dd>3,417,734</dd></div>
-                    <div><dt>Area:</dt><dd>84,899 sq mi</dd></div>
-                    <div><dt>Statehood:</dt><dd>January 4, 1896</dd></div>
-                    <div><dt>Motto:</dt><dd>Industry</dd></div>
-                    <div><dt>Nickname:</dt><dd>The Beehive State</dd></div>
-                    <div><dt>Time Zone:</dt><dd>Mountain (UTC-7)</dd></div>
-                </dl>
-            </section>
+            <div class="data card">
+                <h2>Data</h2>
+                <p><strong>Capital:</strong> Salt Lake City</p>
+                <p><strong>Population:</strong> 3,417,734</p>
+                <p><strong>Area:</strong> 84,899 sq mi</p>
+                <p><strong>Statehood:</strong> January 4, 1896</p>
+                <p><strong>Motto:</strong> Industry</p>
+                <p><strong>Nickname:</strong> The Beehive State</p>
+                <p><strong>Time Zone:</strong> Mountain (UTC-7)</p>
+            </div>
 
-            <section class="card weather-card" aria-labelledby="weather-heading">
-                <h2 id="weather-heading">Weather</h2>
-                <img src="images/snow-icon.svg" alt="Snowy weather" class="weather-icon" width="80" height="80">
-                <dl>
-                    <div><dt>Temperature:</dt><dd>35 &deg;F</dd></div>
-                    <div><dt>Conditions:</dt><dd>Snow</dd></div>
-                    <div><dt>Wind:</dt><dd>10 mph</dd></div>
-                    <div><dt>Wind Chill:</dt><dd><span id="wind-chill">N/A</span></dd></div>
-                </dl>
-            </section>
-        </section>
+            <div class="weather card">
+                <h2>Weather</h2>
+                <img src="images/snow-icon.svg" alt="Snow icon" class="weather-icon">
+                <p><strong>Temperature:</strong> 35 &deg;F</p>
+                <p><strong>Conditions:</strong> Snow</p>
+                <p><strong>Wind:</strong> 10 mph</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </div>
+        </div>
     </main>
 
-    <footer class="place-footer">
+    <footer>
         <p>&copy; <span id="currentyear"></span> &#127956;&#65039; Flavio Dias &#127956;&#65039; Utah, USA</p>
         <p id="lastModified"></p>
     </footer>
