@@ -1,22 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Snowy weather">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Snowy weather">
   <title>Snowy weather</title>
-  <path d="M78 52a14 14 0 0 0-27-4 13 13 0 0 0-18 12 13 13 0 0 0 13 13h32a11 11 0 0 0 0-21z" fill="#C5A572" stroke="#003366" stroke-width="2"/>
-  <g stroke="#003366" stroke-width="2.5" stroke-linecap="round">
-    <g transform="translate(32,87)">
-      <line x1="-6" y1="0" x2="6" y2="0"/>
-      <line x1="0" y1="-6" x2="0" y2="6"/>
-      <line x1="-4" y1="-4" x2="4" y2="4"/>
-      <line x1="-4" y1="4" x2="4" y2="-4"/>
+  <path d="M90 56a16 16 0 0 0-31-4 14 14 0 0 0-19 13 14 14 0 0 0 14 14h36a12 12 0 0 0 0-23z" fill="#E8EEF5" stroke="#003366" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#003366" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <g transform="translate(38,99)">
+      <line x1="-7" y1="0" x2="7" y2="0"/>
+      <line x1="0" y1="-7" x2="0" y2="7"/>
+      <line x1="-5" y1="-5" x2="5" y2="5"/>
+      <line x1="-5" y1="5" x2="5" y2="-5"/>
     </g>
-    <g transform="translate(50,93)">
-      <line x1="-5" y1="0" x2="5" y2="0"/>
-      <line x1="0" y1="-5" x2="0" y2="5"/>
+    <g transform="translate(60,105)">
+      <line x1="-7" y1="0" x2="7" y2="0"/>
+      <line x1="0" y1="-7" x2="0" y2="7"/>
+      <line x1="-5" y1="-5" x2="5" y2="5"/>
+      <line x1="-5" y1="5" x2="5" y2="-5"/>
     </g>
-    <g transform="translate(68,87)">
-      <line x1="-6" y1="0" x2="6" y2="0"/>
-      <line x1="0" y1="-6" x2="0" y2="6"/>
-      <line x1="-4" y1="-4" x2="4" y2="4"/>
-      <line x1="-4" y1="4" x2="4" y2="-4"/>
+    <g transform="translate(82,99)">
+      <line x1="-7" y1="0" x2="7" y2="0"/>
+      <line x1="0" y1="-7" x2="0" y2="7"/>
+      <line x1="-5" y1="-5" x2="5" y2="5"/>
+      <line x1="-5" y1="5" x2="5" y2="-5"/>
     </g>
   </g>
 </svg>
