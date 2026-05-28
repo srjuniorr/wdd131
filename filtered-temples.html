@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temples | WDD 131 | Flavio Dias</title>
+    <meta name="description" content="A filtered picture album of LDS temples built dynamically with JavaScript for the WDD 131 Week 4 assignment.">
+    <meta name="author" content="Flavio Dias">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span class="site-name">Temple Album</span>
+        <button id="menu-toggle" aria-label="Menu">&#9776;</button>
+        <nav id="main-nav">
+            <a href="#" data-filter="home" class="active">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1 id="page-title">Home</h1>
+
+        <!-- the temple cards are added here by javascript -->
+        <section class="album" id="album"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Flavio Dias | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
