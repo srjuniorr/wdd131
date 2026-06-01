@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation | WDD 131 | Flavio Dias</title>
+    <meta name="description" content="The confirmation page for the WDD 131 Week 5 product review form, with a review counter using localStorage.">
+    <meta name="author" content="Flavio Dias">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <span class="site-name">Product Reviews</span>
+    </header>
+
+    <main>
+        <h1>Thank You!</h1>
+
+        <section class="confirmation">
+            <p>Your review was submitted successfully.</p>
+
+            <!-- this list is filled in by javascript from the form data -->
+            <ul id="review-summary"></ul>
+
+            <p class="counter">You are review number
+                <span id="review-count"></span> on this site.</p>
+
+            <p><a class="back-link" href="form.html">Write another review</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Flavio Dias | Utah, USA</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

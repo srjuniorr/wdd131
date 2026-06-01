@@ -1,0 +1,231 @@
+/* WDD 131 - Week 05 - Product Review Form styles */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* header */
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.site-name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+main {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: #003366;
+    margin: 20px 0;
+}
+
+/* the form is a white card so it stands out from the background */
+form {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* labels sit above the inputs for an easy to read layout */
+label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #003366;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    padding: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #999;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* a clear focus outline helps usability and keyboard users */
+select:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #f5b500;
+    outline-offset: 1px;
+}
+
+/* the red star shows which fields are required */
+.required {
+    color: #b30000;
+    font-weight: bold;
+}
+
+/* fieldsets group the rating and the features together (proximity) */
+fieldset {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: 500;
+    color: #003366;
+    padding: 0 8px;
+}
+
+/* star rating */
+.rating {
+    display: inline-flex;
+    flex-direction: row-reverse; /* reversed so :checked can fill the stars to the left */
+    font-size: 2.2rem;
+    line-height: 1;
+}
+
+/* hide the radio dots but keep them reachable by keyboard */
+.rating input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.rating label {
+    color: #ccc;
+    cursor: pointer;
+    margin: 0 2px;
+    padding: 0;
+}
+
+/* fill the chosen star and every star after it in the markup (to its left) */
+.rating input:checked ~ label {
+    color: #f5b500;
+}
+
+/* fill stars on hover too */
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #f5b500;
+}
+
+/* show a focus ring on the star when its radio is focused with the keyboard */
+.rating input:focus + label {
+    outline: 2px solid #003366;
+}
+
+/* checkboxes for the useful features */
+.checkbox-line {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.checkbox-line input {
+    width: auto;
+    margin-right: 10px;
+}
+
+.checkbox-line label {
+    margin: 0;
+    font-weight: 400;
+    color: #333;
+}
+
+/* submit button */
+input[type="submit"] {
+    margin-top: 25px;
+    background-color: #003366;
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    padding: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #00509e;
+}
+
+/* confirmation page (review.html) */
+.confirmation {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#review-summary {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+#review-summary li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.counter {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #003366;
+    margin-top: 20px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #00509e;
+    font-weight: 500;
+}
+
+/* footer */
+footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* bigger screens get a little more breathing room */
+@media (min-width: 700px) {
+    main {
+        max-width: 700px;
+    }
+
+    form {
+        padding: 35px;
+    }
+}
