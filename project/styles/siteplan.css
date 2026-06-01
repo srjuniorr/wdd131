@@ -1,0 +1,208 @@
+/* WDD 131 - Final Project - site plan document styles */
+/* Flavio Dias */
+/* this file is only for the siteplan page, the site itself uses base.css */
+
+/* same colors and fonts that the site will use */
+:root {
+    --bg: #0d0e14;
+    --surface: #15161e;
+    --surface-2: #1d1f29;
+    --text: #ece6d6;
+    --muted: #b7b09c;
+    --gold: #d4af37;
+    --amber: #8a6d3b;
+    --font-head: 'Cinzel', Georgia, serif;
+    --font-body: 'EB Garamond', Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.65;
+}
+
+.doc {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 25px 20px 65px;
+}
+
+.doc-header {
+    text-align: center;
+    border-bottom: 2px solid var(--amber);
+    padding-bottom: 25px;
+    margin-bottom: 32px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-head);
+    color: var(--gold);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 0 0 0.3em;
+}
+
+h2 {
+    font-size: 1.6rem;
+    border-bottom: 1px solid var(--amber);
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+a {
+    color: var(--gold);
+}
+
+.subtitle {
+    color: var(--muted);
+    font-style: italic;
+    font-size: 1.15rem;
+    margin: 0;
+}
+
+section {
+    margin-bottom: 25px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+/* the color scheme swatches */
+
+.swatch-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+}
+
+.swatch {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    padding: 13px 16px;
+}
+
+.swatch-chip {
+    flex: 0 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 8px;
+    border: 1px solid var(--amber);
+}
+
+/* one class for each color chip so I dont need inline styles */
+.swatch-void { background-color: var(--bg); }
+.swatch-surface { background-color: var(--surface); }
+.swatch-parchment { background-color: var(--text); }
+.swatch-gold { background-color: var(--gold); }
+.swatch-amber { background-color: var(--amber); }
+
+.swatch-info strong {
+    font-family: var(--font-head);
+    color: var(--gold);
+}
+
+.swatch-info code {
+    color: var(--muted);
+}
+
+/* the typography samples */
+
+.font-sample {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 16px;
+}
+
+.sample-head {
+    font-family: var(--font-head);
+    color: var(--gold);
+    font-size: 1.6rem;
+}
+
+.sample-body {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+}
+
+/* the wireframe drawings */
+
+.wireframes {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: 1fr;
+}
+
+.wireframes figure {
+    margin: 0;
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+}
+
+.wireframes svg {
+    width: 100%;
+    height: auto;
+    max-width: 360px;
+}
+
+.wireframes figcaption {
+    margin-top: 10px;
+    font-family: var(--font-head);
+    color: var(--gold);
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .swatch-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .wireframes {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    .wireframes svg {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+/* WDD 131 - Final Project - The Elden Beast Codex styles (larger screens) */
+/* Flavio Dias */
+
+@media (min-width: 768px) {
+
+    /* bigger headings on bigger screens */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+
+    /* the nav becomes a horizontal bar and the hamburger goes away */
+    #menu-toggle {
+        display: none;
+    }
+
+    .primary-nav {
+        display: block;
+        flex-basis: auto;
+    }
+
+    .primary-nav ul {
+        flex-direction: row;
+        gap: 8px;
+        margin-top: 0;
+    }
+
+    .primary-nav a {
+        border-bottom: none;
+        padding: 6px 13px;
+    }
+
+    /* hero becomes two columns, text and image side by side */
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .weapon-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-inner {
+        padding: 32px 20px;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    /* three weapons per row on desktop */
+    .weapon-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    body {
+        font-size: 1.15rem;
+    }
+}

@@ -1,0 +1,597 @@
+/* WDD 131 - Final Project - The Elden Beast Codex styles (mobile first) */
+/* Flavio Dias */
+
+/* my colors and fonts. I kept them here so I dont repeat the codes everywhere */
+:root {
+    --bg: #0d0e14;
+    --surface: #15161e;
+    --surface-2: #1d1f29;
+    --text: #ece6d6;
+    --muted: #b7b09c;
+    --gold: #d4af37;
+    --amber: #8a6d3b;
+    --gold-soft: #e7c95a;
+    --font-head: 'Cinzel', Georgia, serif;
+    --font-body: 'EB Garamond', Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.65;
+    display: flex;
+    flex-direction: column;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-head);
+    color: var(--gold);
+    line-height: 1.2;
+    margin: 0 0 0.5em;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+a {
+    color: var(--gold);
+}
+
+a:hover,
+a:focus {
+    color: var(--gold-soft);
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* main grows so the footer stays at the bottom */
+main {
+    flex: 1 0 auto;
+    padding: 30px 0 50px;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+/* header and navigation */
+
+.site-header {
+    background-color: var(--surface);
+    border-bottom: 2px solid var(--amber);
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+}
+
+/* the hamburger button (only shows on mobile) */
+#menu-toggle {
+    background-color: transparent;
+    color: var(--gold);
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+/* on mobile the nav is a dropdown under the header, like my temples page */
+.primary-nav {
+    display: none;
+    flex-basis: 100%;
+}
+
+.primary-nav.open {
+    display: block;
+}
+
+.primary-nav ul {
+    list-style: none;
+    margin: 8px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.primary-nav a {
+    display: block;
+    padding: 11px 5px;
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--surface-2);
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus {
+    color: var(--gold-soft);
+}
+
+.primary-nav a.active {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* buttons */
+
+.btn {
+    display: inline-block;
+    font-family: var(--font-head);
+    font-size: 0.95rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 11px 22px;
+    border-radius: 8px;
+    border: 1px solid var(--gold);
+    background-color: var(--gold);
+    color: var(--bg);
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--gold-soft);
+    color: var(--bg);
+}
+
+/* the ghost version is just the outline */
+.btn-ghost {
+    background-color: transparent;
+    color: var(--gold);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+    background-color: var(--surface-2);
+    color: var(--gold-soft);
+}
+
+/* hero section on the home page */
+
+.hero {
+    display: grid;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.hero-content .lead {
+    font-size: 1.2rem;
+    color: var(--muted);
+    max-width: 55ch;
+}
+
+.hero-media {
+    margin: 0;
+}
+
+.hero-media img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--amber);
+}
+
+.hero-media figcaption {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* cards on the home page */
+
+.section-title {
+    border-bottom: 1px solid var(--amber);
+    padding-bottom: 6px;
+}
+
+.card-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+}
+
+.card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    border-radius: 8px;
+    border: 1px solid var(--amber);
+    margin-bottom: 13px;
+    width: 100%;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    color: var(--muted);
+    flex: 1;
+}
+
+.card .btn {
+    align-self: flex-start;
+    margin-top: 8px;
+}
+
+/* images and quote on the lore page */
+
+.article-image {
+    margin: 25px 0;
+}
+
+.article-image img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--amber);
+}
+
+.article-image figcaption {
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: var(--muted);
+    font-style: italic;
+}
+
+blockquote {
+    margin: 25px 0;
+    padding: 8px 20px;
+    border-left: 4px solid var(--gold);
+    background-color: var(--surface);
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* phases and tips on the guide page */
+
+.phase-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.phase-list li {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-left: 4px solid var(--gold);
+    border-radius: 8px;
+    padding: 16px 20px;
+}
+
+.phase-list h3 {
+    margin: 0 0 5px;
+}
+
+.tip-list {
+    padding-left: 20px;
+}
+
+.tip-list li {
+    margin-bottom: 8px;
+}
+
+/* the weapon filters, grid and loadout */
+
+.filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border: 1px solid var(--amber);
+    border-radius: 999px;
+    background-color: transparent;
+    color: var(--text);
+    cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+    border-color: var(--gold);
+    color: var(--gold-soft);
+}
+
+/* the filter I clicked stays gold */
+.filter-btn.active {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--bg);
+}
+
+.weapon-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+}
+
+.weapon-card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.weapon-card img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--amber);
+    margin-bottom: 11px;
+}
+
+.weapon-card h3 {
+    margin: 0 0 4px;
+}
+
+.weapon-type {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: var(--font-head);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--bg);
+    background-color: var(--gold);
+    padding: 2px 10px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+}
+
+.weapon-card p {
+    color: var(--muted);
+    flex: 1;
+}
+
+.save-btn {
+    align-self: flex-start;
+    font-family: var(--font-head);
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--gold);
+    cursor: pointer;
+}
+
+.save-btn:hover,
+.save-btn:focus {
+    background-color: var(--surface-2);
+}
+
+/* the button turns gold when the weapon is in the loadout */
+.save-btn.saved {
+    background-color: var(--gold);
+    color: var(--bg);
+}
+
+.loadout {
+    background-color: var(--surface);
+    border: 1px dashed var(--amber);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+.loadout h3 {
+    margin-top: 0;
+}
+
+.loadout-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.loadout-list li {
+    background-color: var(--surface-2);
+    border: 1px solid var(--amber);
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 0.95rem;
+}
+
+.loadout-empty {
+    color: var(--muted);
+    font-style: italic;
+}
+
+/* the feedback form */
+
+.form-card {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    padding: 22px;
+    max-width: 600px;
+}
+
+.field {
+    margin-bottom: 17px;
+}
+
+/* labels above the inputs so the form is easier to read */
+.field label {
+    display: block;
+    font-family: var(--font-head);
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text);
+    background-color: var(--bg);
+    border: 1px solid var(--amber);
+    border-radius: 8px;
+    padding: 9px 11px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+    border-color: var(--gold);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.35);
+}
+
+.field textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* the spoiler checkbox sits next to its label */
+.field-inline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.field-inline label {
+    margin: 0;
+}
+
+.field-inline input {
+    width: auto;
+}
+
+.hint {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+.form-message {
+    margin-top: 20px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--gold);
+    background-color: var(--surface-2);
+}
+
+/* hide the message box until the form is sent */
+.form-message:empty {
+    display: none;
+}
+
+.feedback-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+    display: grid;
+    gap: 13px;
+}
+
+.feedback-list li {
+    background-color: var(--surface);
+    border: 1px solid var(--surface-2);
+    border-radius: 8px;
+    padding: 14px 18px;
+}
+
+.feedback-list .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* footer */
+
+.site-footer {
+    background-color: var(--surface);
+    border-top: 2px solid var(--amber);
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+.footer-inner p {
+    margin: 0 0 8px;
+}
+
+.last-visit {
+    color: var(--gold);
+    font-style: italic;
+}
