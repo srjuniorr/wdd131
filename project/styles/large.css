@@ -1,0 +1,58 @@
+/* ===================================================================
+   The Elden Beast Codex — large-screen enhancements
+   Loaded after base.css. Mobile-first overrides only (no duplicates).
+   =================================================================== */
+
+@media (min-width: 48rem) {
+  /* Navigation becomes a horizontal bar; hide the hamburger */
+  .nav-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    flex-basis: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .primary-nav ul {
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+
+  .primary-nav a {
+    border-bottom: none;
+    padding: 0.4rem 0.8rem;
+  }
+
+  /* Hero: two columns (text + art side by side) */
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  /* Multi-column grids */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .weapon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    padding-block: 2rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .weapon-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  body {
+    font-size: 1.125rem;
+  }
+}

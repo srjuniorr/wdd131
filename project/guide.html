@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Flavio Dias Martins Junior">
+  <title>How to Beat the Elden Beast — The Elden Beast Codex</title>
+  <meta name="description" content="A phase-by-phase guide to beating the Elden Beast in Elden Ring, with preparation tips and an interactive list of the best weapons for the fight.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=EB+Garamond:ital@0;1&display=swap">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/guide.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-mark" src="images/favicon.svg" alt="" width="34" height="34">
+        <span>The Elden Beast Codex</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+        <span class="visually-hidden">Menu</span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="lore.html">Lore</a></li>
+          <li><a class="active" href="guide.html" aria-current="page">Guide</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>How to Beat the Elden Beast</h1>
+    <p class="lead">The Elden Beast has a huge health pool, deals heavy Holy damage, and loves to
+      fly away just when you get close. Prepare for those three problems and the fight gets a lot
+      more manageable.</p>
+
+    <figure class="article-image">
+      <img src="images/elden-beast-guide.webp"
+           alt="The Tarnished standing before the Elden Beast across the arena"
+           width="1000" height="359" loading="eager" decoding="async">
+      <figcaption>The final confrontation at the foot of the Erdtree.</figcaption>
+    </figure>
+
+    <section>
+      <h2 class="section-title">Before the fight</h2>
+      <ul class="tip-list">
+        <li><strong>Leave Holy weapons at home.</strong> The Beast resists Holy damage, so Sacred
+          and Golden Order affinities are a waste here.</li>
+        <li><strong>Bring a Spirit Ash.</strong> The Mimic Tear or Black Knife Tiche splits the
+          Beast's attention and buys you safe damage windows.</li>
+        <li><strong>Lean into status effects.</strong> Bleed (hemorrhage) and Frostbite both work
+          and shred its large health bar.</li>
+        <li><strong>Mix your Flask of Wondrous Physick</strong> for the fight — damage reduction or
+          a flat attack boost both help in a long battle.</li>
+        <li><strong>Remember: no Torrent.</strong> You fight on foot, so pack a gap-closer or a
+          ranged option for when it drifts away.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="section-title">The fight, phase by phase</h2>
+      <ol class="phase-list">
+        <li>
+          <h3>1. Elden Stars opener</h3>
+          <p>The Beast almost always opens with Elden Stars — a long stream of homing golden
+            projectiles. Sprint sideways (perpendicular to the Beast) instead of straight back, and
+            most of them miss.</p>
+        </li>
+        <li>
+          <h3>2. Close the distance</h3>
+          <p>It constantly repositions and flies off. Don't panic-heal in the open — use that time
+            to sprint in, or throw a ranged skill so the trip isn't wasted.</p>
+        </li>
+        <li>
+          <h3>3. The gravity pull &amp; explosion</h3>
+          <p>When it forms a glowing orb and pulls you in, sprint away immediately or dodge through
+            the burst on the last moment. Getting greedy here is the most common death.</p>
+        </li>
+        <li>
+          <h3>4. Holy sweeps and dives</h3>
+          <p>Its sword sweeps and body slams are telegraphed — roll <em>into</em> them, toward the
+            Beast, to end up beside it for free hits.</p>
+        </li>
+        <li>
+          <h3>5. Proc statuses, then stagger</h3>
+          <p>Keep bleed or frost building. Heavy weapons can break its stance and stagger it —
+            follow up with a critical hit to take off a big chunk.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section id="weapons">
+      <h2 class="section-title">Best weapons for the fight</h2>
+      <p>Use the filters to narrow the list by playstyle, then tap <strong>Save to loadout</strong>
+        on any weapon to build your personal list — it is saved in your browser for next time.</p>
+
+      <div class="filter-bar" id="filterBar" role="group" aria-label="Filter weapons by type">
+        <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" type="button" data-filter="Bleed" aria-pressed="false">Bleed</button>
+        <button class="filter-btn" type="button" data-filter="Dexterity" aria-pressed="false">Dexterity</button>
+        <button class="filter-btn" type="button" data-filter="Intelligence" aria-pressed="false">Intelligence</button>
+        <button class="filter-btn" type="button" data-filter="Faith" aria-pressed="false">Faith</button>
+        <button class="filter-btn" type="button" data-filter="Strength" aria-pressed="false">Strength</button>
+      </div>
+
+      <noscript>
+        <p>JavaScript is turned off, so the interactive list is hidden. Recommended weapons:
+          Rivers of Blood, Mohgwyn's Sacred Spear, Bloodhound's Fang, Moonveil, Dark Moon
+          Greatsword, Blasphemous Blade and Giant-Crusher.</p>
+      </noscript>
+
+      <div class="weapon-grid" id="weaponGrid"></div>
+
+      <div class="loadout" id="loadout">
+        <h3>My loadout</h3>
+        <ul class="loadout-list" id="loadoutList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> The Elden Beast Codex — a fan project for WDD 131 (educational use).</p>
+      <p>Elden Ring and the Elden Beast are property of FromSoftware and Bandai Namco. This is an
+        unofficial, non-commercial fan site.</p>
+      <p><a href="references.html">References &amp; image sources</a></p>
+      <p id="lastVisit" class="last-visit"></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,689 @@
+/* ===================================================================
+   The Elden Beast Codex — base styles (mobile-first)
+   Palette: Gold & Cosmic Void
+   =================================================================== */
+
+:root {
+  /* Colors */
+  --bg: #0d0e14;          /* page background (near-black void) */
+  --surface: #15161e;     /* cards, header, footer surfaces */
+  --surface-2: #1d1f29;   /* hover / raised surface */
+  --text: #ece6d6;        /* parchment body text */
+  --muted: #b7b09c;       /* secondary text */
+  --gold: #d4af37;        /* primary accent: headings, links, borders */
+  --amber: #8a6d3b;       /* secondary accent: details, hovers */
+  --gold-soft: #e7c95a;   /* link hover */
+
+  /* Typography */
+  --font-head: "Cinzel", Georgia, "Times New Roman", serif;
+  --font-body: "EB Garamond", Georgia, "Times New Roman", serif;
+
+  /* Layout */
+  --maxw: 70rem;
+  --radius: 8px;
+  --gap: 1rem;
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1.075rem;
+  line-height: 1.65;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ---- Typography ---- */
+h1,
+h2,
+h3 {
+  font-family: var(--font-head);
+  color: var(--gold);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover,
+a:focus {
+  color: var(--gold-soft);
+}
+
+/* Visible focus ring for keyboard users (accessibility) */
+:focus-visible {
+  outline: 3px solid var(--gold-soft);
+  outline-offset: 2px;
+}
+
+/* ---- Skip link (accessibility) ---- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--gold);
+  color: var(--bg);
+  padding: 0.6rem 1rem;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* ---- Layout container ---- */
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: 1.1rem;
+}
+
+main {
+  flex: 1 0 auto;
+  padding-block: 2rem 3rem;
+}
+
+section {
+  margin-bottom: 2.75rem;
+}
+
+/* ===================================================================
+   Header & navigation
+   =================================================================== */
+.site-header {
+  background-color: var(--surface);
+  border-bottom: 2px solid var(--amber);
+}
+
+.header-inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 0.75rem 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 34px;
+  height: 34px;
+}
+
+/* Hamburger button (shown on small screens) */
+.nav-toggle {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0 9px;
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+.nav-toggle-bar {
+  display: block;
+  height: 3px;
+  background-color: var(--gold);
+  border-radius: 2px;
+}
+
+/* Mobile: nav is collapsed until toggled open */
+.primary-nav {
+  flex-basis: 100%;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease;
+}
+
+.primary-nav.open {
+  max-height: 22rem;
+}
+
+.primary-nav ul {
+  list-style: none;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.primary-nav a {
+  display: block;
+  padding: 0.7rem 0.3rem;
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px solid var(--surface-2);
+}
+
+.primary-nav a:hover,
+.primary-nav a:focus {
+  color: var(--gold-soft);
+}
+
+.primary-nav a.active {
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* ===================================================================
+   Buttons
+   =================================================================== */
+.btn {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.7rem 1.4rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--gold);
+  background-color: var(--gold);
+  color: var(--bg);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--gold-soft);
+  color: var(--bg);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--gold);
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+  background-color: var(--surface-2);
+  color: var(--gold-soft);
+}
+
+/* ===================================================================
+   Hero
+   =================================================================== */
+.hero {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.hero-content .lead {
+  font-size: 1.2rem;
+  color: var(--muted);
+  max-width: 55ch;
+}
+
+.hero-media {
+  margin: 0;
+}
+
+.hero-media img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--amber);
+}
+
+.hero-media figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ===================================================================
+   Cards / overview grid
+   =================================================================== */
+.section-title {
+  border-bottom: 1px solid var(--amber);
+  padding-bottom: 0.35rem;
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  border-radius: var(--radius);
+  border: 1px solid var(--amber);
+  margin-bottom: 0.8rem;
+  width: 100%;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  color: var(--muted);
+  flex: 1;
+}
+
+.card .btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* ===================================================================
+   Lore article
+   =================================================================== */
+.article-image {
+  margin: 1.5rem 0;
+}
+
+.article-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--amber);
+}
+
+.article-image figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding: 0.5rem 1.2rem;
+  border-left: 4px solid var(--gold);
+  background-color: var(--surface);
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ===================================================================
+   Guide — phases & tips
+   =================================================================== */
+.phase-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--gap);
+}
+
+.phase-list li {
+  background-color: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-left: 4px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 1rem 1.2rem;
+}
+
+.phase-list h3 {
+  margin: 0 0 0.3rem;
+}
+
+.tip-list {
+  padding-left: 1.2rem;
+}
+
+.tip-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===================================================================
+   Weapons — filter + grid + loadout
+   =================================================================== */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filter-btn {
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--amber);
+  border-radius: 999px;
+  background-color: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  border-color: var(--gold);
+  color: var(--gold-soft);
+}
+
+.filter-btn[aria-pressed="true"] {
+  background-color: var(--gold);
+  border-color: var(--gold);
+  color: var(--bg);
+}
+
+.weapon-grid {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+}
+
+.weapon-card {
+  background-color: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.weapon-card img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--amber);
+  margin-bottom: 0.7rem;
+}
+
+.weapon-card h3 {
+  margin: 0 0 0.25rem;
+}
+
+.weapon-type {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-head);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background-color: var(--amber);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.6rem;
+}
+
+.weapon-card p {
+  color: var(--muted);
+  flex: 1;
+}
+
+.save-btn {
+  align-self: flex-start;
+  font-family: var(--font-head);
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--gold);
+  border-radius: var(--radius);
+  background-color: transparent;
+  color: var(--gold);
+  cursor: pointer;
+}
+
+.save-btn:hover,
+.save-btn:focus {
+  background-color: var(--surface-2);
+}
+
+.save-btn[aria-pressed="true"] {
+  background-color: var(--gold);
+  color: var(--bg);
+}
+
+.loadout {
+  background-color: var(--surface);
+  border: 1px dashed var(--amber);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.loadout h3 {
+  margin-top: 0;
+}
+
+.loadout-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.loadout-list li {
+  background-color: var(--surface-2);
+  border: 1px solid var(--amber);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.95rem;
+}
+
+.loadout-empty {
+  color: var(--muted);
+  font-style: italic;
+}
+
+/* ===================================================================
+   Form (feedback)
+   =================================================================== */
+.form-card {
+  background-color: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  max-width: 38rem;
+}
+
+.field {
+  margin-bottom: 1.1rem;
+}
+
+.field label {
+  display: block;
+  font-family: var(--font-head);
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
+  margin-bottom: 0.35rem;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background-color: var(--bg);
+  border: 1px solid var(--amber);
+  border-radius: var(--radius);
+  padding: 0.6rem 0.7rem;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--gold);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.35);
+}
+
+.field textarea {
+  min-height: 7rem;
+  resize: vertical;
+}
+
+.field-inline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.field-inline label {
+  margin: 0;
+}
+
+.field-inline input {
+  width: auto;
+}
+
+.hint {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+.form-message {
+  margin-top: 1.2rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--gold);
+  background-color: var(--surface-2);
+}
+
+.form-message:empty {
+  display: none;
+}
+
+.feedback-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.feedback-list li {
+  background-color: var(--surface);
+  border: 1px solid var(--surface-2);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+}
+
+.feedback-list .meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* ===================================================================
+   Footer
+   =================================================================== */
+.site-footer {
+  background-color: var(--surface);
+  border-top: 2px solid var(--amber);
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.footer-inner {
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding: 1.5rem 1.1rem;
+}
+
+.footer-inner p {
+  margin: 0 0 0.5rem;
+}
+
+.last-visit {
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* ---- Utility ---- */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* ---- Respect reduced-motion preference ---- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition-duration: 0.001ms !important;
+  }
+}
