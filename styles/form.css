@@ -35,7 +35,7 @@ h1 {
     margin: 20px 0;
 }
 
-/* the form is a white card so it stands out from the background */
+/* I made the form a white card so it stands out from the gray background */
 form {
     background-color: #ffffff;
     border: 1px solid #ddd;
@@ -46,7 +46,7 @@ form {
     flex-direction: column;
 }
 
-/* labels sit above the inputs for an easy to read layout */
+/* I put the labels above the inputs so the form is easier to read */
 label {
     margin-top: 15px;
     margin-bottom: 5px;
@@ -67,7 +67,7 @@ textarea {
     box-sizing: border-box;
 }
 
-/* a clear focus outline helps usability and keyboard users */
+/* a yellow outline when I click a field so you can see where you are */
 select:focus,
 input:focus,
 textarea:focus {
@@ -75,13 +75,13 @@ textarea:focus {
     outline-offset: 1px;
 }
 
-/* the red star shows which fields are required */
+/* the red star is the clue that the field is required */
 .required {
     color: #b30000;
     font-weight: bold;
 }
 
-/* fieldsets group the rating and the features together (proximity) */
+/* fieldsets to keep the rating and the features grouped together */
 fieldset {
     margin-top: 20px;
     border: 1px solid #ddd;
@@ -98,12 +98,12 @@ legend {
 /* star rating */
 .rating {
     display: inline-flex;
-    flex-direction: row-reverse; /* reversed so :checked can fill the stars to the left */
+    flex-direction: row-reverse; /* reversed so the css can fill the stars to the left */
     font-size: 2.2rem;
     line-height: 1;
 }
 
-/* hide the radio dots but keep them reachable by keyboard */
+/* hide the round radio buttons but you can still use the keyboard */
 .rating input {
     position: absolute;
     opacity: 0;
@@ -118,18 +118,18 @@ legend {
     padding: 0;
 }
 
-/* fill the chosen star and every star after it in the markup (to its left) */
+/* fill the star I picked and the ones after it (the ones to the left) */
 .rating input:checked ~ label {
     color: #f5b500;
 }
 
-/* fill stars on hover too */
+/* fill the stars on hover too so it looks nice */
 .rating label:hover,
 .rating label:hover ~ label {
     color: #f5b500;
 }
 
-/* show a focus ring on the star when its radio is focused with the keyboard */
+/* outline on the star when you use the keyboard */
 .rating input:focus + label {
     outline: 2px solid #003366;
 }
@@ -219,7 +219,7 @@ footer p {
     margin: 5px 0;
 }
 
-/* bigger screens get a little more breathing room */
+/* on bigger screens I give the form a little more room */
 @media (min-width: 700px) {
     main {
         max-width: 700px;
