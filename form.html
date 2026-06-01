@@ -25,7 +25,6 @@
     <main>
         <h1>Product Review</h1>
 
-        <!-- the form uses GET so it works on github pages and goes to review.html -->
         <form method="get" action="review.html">
 
             <!-- product name. my javascript adds the options here -->
@@ -34,10 +33,8 @@
                 <option value="" disabled selected>Select a Product ...</option>
             </select>
 
-            <!-- overall rating with stars. all the radios use the same name so I can only pick one -->
             <fieldset class="rating-set">
                 <legend>Overall Rating <span class="required">*</span></legend>
-                <!-- the stars are backwards on purpose so the css can fill them from the left -->
                 <div class="rating">
                     <input type="radio" id="rating5" name="rating" value="5" required>
                     <label for="rating5" title="5 stars">&#9733;</label>
@@ -56,11 +53,9 @@
                 </div>
             </fieldset>
 
-            <!-- date when the product was installed -->
             <label for="install-date">Date of Installation <span class="required">*</span></label>
             <input type="date" id="install-date" name="install-date" required>
 
-            <!-- useful features, you can check all the ones you want -->
             <fieldset class="features-set">
                 <legend>Useful Features</legend>
 
@@ -86,11 +81,9 @@
                 </div>
             </fieldset>
 
-            <!-- written review, this one is not required -->
             <label for="review-text">Written Review</label>
             <textarea id="review-text" name="review-text" rows="5"></textarea>
 
-            <!-- user name, optional -->
             <label for="user-name">User Name</label>
             <input type="text" id="user-name" name="user-name">
 
