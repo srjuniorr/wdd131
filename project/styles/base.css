@@ -207,6 +207,7 @@ section {
 .hero {
     display: grid;
     gap: 25px;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
